@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  drpyS:
+    image: mingertai/my-drpys:latest  
+    container_name: drpys
+    ports:
+      - "5757:5757"
+    volumes:
+      - /home/drpy-node/:/root/drpy-node
+    restart: always
+    env_file:
+      - /home/drpy-node/.env.development
